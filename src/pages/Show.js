@@ -2,12 +2,6 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 
 function Show(props) {
-    console.log(props)
-    if(props.people === null) {
-        return(
-            <h1>Please return to the index page</h1>
-        )
-    }
     const id = props.match.params.id
     const people = props.people
     const person = people.find(p => p._id === id)
